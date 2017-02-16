@@ -3,3 +3,6 @@
 *.xml
 .gitignore
 
+.idea/modules.xml
+.idea/omreset.css.iml
+.idea/workspace.xml
