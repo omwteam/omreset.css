@@ -4,40 +4,9 @@ html, body, p, ol, ul, li, textarea, h1, h2, h3, h4 {
     padding: 0;
 }
 
-body {
-    -webkit-text-size-adjust: none;
-    -webkit-overflow-scrolling: touch;
-    -webkit-tap-highlight-color: transparent;
-    -webkit-user-select: none;
-    font-size: 14px;
-    font-family: "Helvetica Neue", Helvetica, STHeiTi, sans-serif;
-}
-
-ul, ol {
-    list-style: none;
-}
-
-a {
-    text-decoration: none;
-}
-
-button, input, select, textarea {
-    margin: 0;
-}
-
-input:focus, input:active, button:focus, button:active, textarea:active, textarea:focus, select:active, select:focus, div[contenteditable=true]:active, div[contenteditable=true]:focus {
-    outline: none;
-}
-
-input::-webkit-search-cancel-button {
-    display: none;
-}
-
-input:focus::-webkit-input-placeholder {
-    opacity: 0;
-    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
-}
-
+/**
+ * statement box models
+ */
 html {
     box-sizing: border-box;
 }
@@ -50,14 +19,77 @@ html {
     -webkit-box-sizing: inherit;
 }
 
-article, footer, header, nav, section {
+body {
+    -webkit-text-size-adjust: none;
+    -webkit-overflow-scrolling: touch;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-user-select: none;
+    font-size: 14px;
+    font-family: "Helvetica Neue", Helvetica, STHeiTi, sans-serif;
+}
+
+article, nav, header, section, aside, footer,
+summary, details, figcaption, figure,
+hgroup, menu, canvas {
     display: block;
+}
+
+button, input, select, textarea {
+    margin: 0;
+}
+
+/**
+ * Correct the inability to style clickable types in iOS and Safari.
+ */
+
+button,
+[type="button"],
+[type="submit"] {
+    -webkit-appearance: button;
+}
+
+input:focus, input:active,
+button:focus, button:active,
+textarea:active, textarea:focus,
+select:active, select:focus,
+div[contenteditable=true]:active, div[contenteditable=true]:focus {
+    outline: none;
+}
+
+/**
+ * Default hidden element or contains hidden attr
+ */
+input::-webkit-search-cancel-button, template,[hidden]  {
+    display: none;
+}
+
+input:focus::-webkit-input-placeholder {
+    opacity: 0;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
 }
 
 img, audio, video {
     height: auto;
     max-width: 100%;
+    vertical-align: middle; /*Remove the default blank after the image*/
 }
-img {
-    vertical-align: middle; /*去掉图片后面默认的空白*/
+
+/**
+ * Remove default style and Add the correct font size in all browsers.
+ */
+ul, ol {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+b,
+strong {
+    font-weight: bolder;
+}
+
+small {
+    font-size: 80%;
 }
