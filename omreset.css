@@ -58,3 +58,6 @@ img, audio, video {
     height: auto;
     max-width: 100%;
 }
+img {
+    vertical-align: middle; /*去掉图片后面默认的空白*/
+}
